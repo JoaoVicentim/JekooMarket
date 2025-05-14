@@ -3,6 +3,7 @@ package com.jekoomarket.security;
 import com.jekoomarket.service.JekUsuarioService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -15,7 +16,7 @@ public class JekSecurityConfig {
 
     private final JekUsuarioService usuarioService;
 
-    public JekSecurityConfig(JekUsuarioService usuarioService) {
+    public JekSecurityConfig(@Lazy JekUsuarioService usuarioService) {
         this.usuarioService = usuarioService;
     }
 
@@ -52,9 +53,8 @@ public class JekSecurityConfig {
                         .logoutSuccessUrl("/jek-login?logout")
                         .permitAll()
                 )
-                .headers(headers -> headers.frameOptions().sameOrigin());
+                .headers(headers -> headers.frameOptions(config -> config.sameOrigin())); // ✅ atualizado
 
         return http.build();
     }
-
 }
