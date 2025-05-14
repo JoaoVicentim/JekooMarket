@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>JekooMarket - Marketplace Sustentável</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<header>
+    <h1>Bem-vindo ao JekooMarket</h1>
+    <nav>
+        <a th:href="@{/login}">Login</a> |
+        <a th:href="@{/cadastro}">Cadastro</a>
+    </nav>
+</header>
+
+<div class="container">
+    <section class="intro">
+        <h2>Seu marketplace de produtos sustentáveis</h2>
+        <p>
+            No <strong>JekooMarket</strong>, você encontra produtos que respeitam o meio ambiente e promovem o consumo consciente.
+            Compre de vendedores que prezam pela sustentabilidade, transparência e inovação.
+        </p>
+        <p>
+            Cadastre-se agora e faça parte desta comunidade que transforma o mundo através de escolhas responsáveis.
+        </p>
+        <a class="btn" th:href="@{/produtos}">Ver Produtos</a>
+    </section>
+</div>
+</body>
+</html>

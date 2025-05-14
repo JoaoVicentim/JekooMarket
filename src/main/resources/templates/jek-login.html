@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>JekooMarket - Login</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<div class="container">
+    <h2>Entrar no JekooMarket</h2>
+    <form th:action="@{/login}" method="post">
+        <label for="username">E-mail:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required />
+        <button type="submit">Entrar</button>
+    </form>
+    <p>Não tem conta? <a th:href="@{/cadastro}">Cadastre-se aqui</a></p>
+</div>
+</body>
+</html>
