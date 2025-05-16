@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - JekooMarket</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/register.css">
+</head>
+<body>
+<div class="container">
+    <h2>Cadastre-se no JekooMarket</h2>
+    <form method="post" action="/register">
+        <input type="text" name="name" placeholder="Nome completo" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Senha" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <div class="link">
+        <p>Já possui conta? <a href="/login">Entrar</a></p>
+    </div>
+</div>
+</body>
+</html>
